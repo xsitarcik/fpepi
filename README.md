@@ -18,8 +18,10 @@ X0,X1,X2,X3,X4,X5,Class
 0,2,0,2,1,0      
 1,0,0,1,1,1      
   
-After setting the input parameters and preparing your input data, open the command line, go to the directory, where you have downloaded the FPepi.py script and call:   
-`FPepi.py`
+After setting the input parameters and preparing your input data, open the command line, go to the directory, where you have downloaded the FPepi_gini.py or the FPepi_mi.py script and call:   
+`FPepi_mi.py` or `FPepi_gini.py`
+
+FPepi_mi.py is the first variant using K2 score and mutual information score as objectives. FPepi_gini.py is the second variant using K2 score and gini score as objectives. Results shown that gini score achieves high detection power mainly in the disease models with low heritability.
 
 ### Output of the FPepi tool
 In a specified file, the FPepi saves results of its 1st stage (i.e. candidate set before evaluation by the G-test) and also final results (i.e. candidate set after evaluation by the G-test) with the corresponding p-values.
