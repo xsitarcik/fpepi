@@ -5,8 +5,26 @@ The FPepi tool uses flower pollination algorithm coupled with the tabu search to
 The FPepi tool requires Python 3.6 with numpy, pandas and scipy library. 
 
 ### Input parameters
-There are following parameters, that can be set:
-TBA
+Following parameters, that are required to be set inside each script, are as follows:
+`gini_population` represents the number of agents in a population of flowers with Gini score as its objective    
+`k2_population` represents the number of agents in a population of flowers with K2 score as its objective    
+`iteration_size` denotes the number of iterations for which the FPepi algorithm will be running     
+`alpha_value` denotes p-value threshold (before Bonferroni correction) which must be passed by the SNP combination to be said as significant    
+`searching_path` path to the input file     
+`output_file` path to the file, where the results of the epiBAT algorithm will be outputted    
+
+There are also optional parameters, that can be modified:  
+`init_prob` represents the initial probability of switch probability in flower pollination algorithm    
+`min_dof` the minimum required number of samples in one column of contingency table, in other case, the column is discarded    
+`index_beta` beta parameter of Levy flight    
+`required_iterations_for_taboo` represents the number of iterations when the best solution in a population is not changed, that is needed to add that best solution to the tabu table    
+`zeta_radius` defines the approximity when comparing solutions    
+`bee_limit` represents the number of iterations when a solution is not changed, that is then discarded    
+`reflection_coef` represents reflection coefficient of simplex method    
+`extension_coef` represents extension coefficient of simplex method    
+`compression_coef` represents compression coefficient of simplex method    
+`shrink_coef` represents shrink coefficient of simplex method    
+`elite_crossover` represents elite crossover paramater, i.e. probability that one SNP of SNP combination will be replaced by other SNP randomly selected from an agent of population     
 
 # How to run FPepi
 ### Input data file format
